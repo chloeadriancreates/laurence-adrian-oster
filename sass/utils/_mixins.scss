@@ -1,0 +1,33 @@
+@mixin transition($duration: 0.4s) {
+    transition: all $duration ease;
+}
+
+@mixin flex($direction: row, $justify: center, $align: center) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin resetLink($color: black) {
+    color: $color;
+    text-decoration: none;
+}
+
+@mixin yesevaOne($size: calc(38rem / 16)) {
+    font-family: 'Yeseva One', cursive;
+    font-size: $size;
+}
+
+@mixin yanoneKaffeesatz($size: calc(20rem / 16)) {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: $size;
+}
+
+@mixin dropShadowRight($size: 20px) {
+    box-shadow: $size $size 0px 0px $primary--bright;
+}
+
+@mixin dropShadowLeft($size: 20px) {
+    box-shadow: -$size $size 0px 0px $primary--bright;
+}
