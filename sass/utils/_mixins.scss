@@ -22,6 +22,7 @@
 @mixin yanoneKaffeesatz($size: calc(20rem / 16)) {
     font-family: 'Yanone Kaffeesatz', sans-serif;
     font-size: $size;
+    letter-spacing: calc(($size / 100) * 3);
 }
 
 @mixin dropShadowRight($size: 20px) {

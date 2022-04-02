@@ -2,13 +2,91 @@
   box-sizing: border-box;
 }
 
-body, h1, h2, h3, h4, h5, h6, p {
+body, h1, h2, h3, h4, h5, h6, p, ul, li {
   margin: 0;
+  padding: 0;
 }
 
-h1 {
+body {
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  font-size: 1.25rem;
+  letter-spacing: 0.0375rem;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
+  padding: 50px;
+}
+.menu_item {
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  font-size: 1.875rem;
+  letter-spacing: 0.05625rem;
+  color: black;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.menu_item:not(:last-of-type) {
+  padding-right: 3.125rem;
+}
+.menu_item:last-of-type {
+  margin-right: 12.5%;
+}
+.menu_item::after {
+  transition: all 0.4s ease;
+  content: "";
+  width: 0%;
+  margin-top: 1px;
+  height: 1px;
+  background-color: black;
+}
+.menu_item:hover .menu_item::after {
+  width: 100%;
+}
+.menu_button {
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  font-size: 1.875rem;
+  letter-spacing: 0.05625rem;
+  transition: all 0.4s ease;
+  background-color: white;
+  border-radius: 15px;
+  padding: 1.25rem 2.5rem;
+  border: none;
+  box-shadow: none;
+  cursor: pointer;
+}
+.menu_button:hover, .menu_button:focus {
+  box-shadow: 7px 7px 0px 0px #C6B3FF;
+  transform: translate(-7px, -7px);
+}
+
+.hero_background {
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+}
+.hero_picture {
+  width: 100%;
+}
+.hero_color {
+  width: 100%;
+  position: absolute;
+}
+.hero_title {
   font-family: "Yeseva One", cursive;
   font-size: 7.5rem;
+  margin: 100px 50px 3.125rem 50px;
+}
+.hero_subtitle {
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  font-size: 5.625rem;
+  letter-spacing: 0.16875rem;
+  margin: 0px 50px;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,3 +1,76 @@
-h1 {
-    @include yesevaOne(calc(120rem / 16));
+.menu {
+    @include flex(row, end, center);
+    padding: 50px;
+
+    &_item {
+        @include yanoneKaffeesatz(calc(30rem / 16));
+        @include resetLink;
+        @include flex(column, center, center);
+
+        &:not(:last-of-type) {
+            padding-right: calc(50rem / 16);
+        }
+
+        &:last-of-type {
+            margin-right: 12.5%;
+        }
+
+        &::after {
+            @include transition;
+            content: "";
+            width: 0%;
+            margin-top: 1px;
+            height: 1px;
+            background-color: black;
+        }
+
+        &:hover .menu_item::after {
+            width: 100%;
+        }
+    }
+
+    &_button {
+        @include yanoneKaffeesatz(calc(30rem / 16));
+        @include transition;
+        background-color: white;
+        border-radius: 15px;
+        padding: calc(20rem / 16) calc(40rem / 16);
+        border: none;
+        box-shadow: none;
+        cursor: pointer;
+
+        &:hover, &:focus {
+            @include dropShadowRight(7px);
+            transform: translate(-7px, -7px);
+        }
+    }
 }
+
+.hero {
+
+    &_background {
+        width: 100%;
+        position: absolute;
+        z-index: -1;
+    }
+
+    &_picture {
+        width: 100%;
+    }
+
+    &_color {
+        width: 100%;
+        position: absolute;
+    }
+
+    &_title {
+        @include yesevaOne(calc(120rem / 16));
+        margin: 100px 50px calc(50rem / 16) 50px;
+    }
+
+    &_subtitle {
+        @include yanoneKaffeesatz(calc(90rem / 16));
+        margin: 0px 50px;
+    }
+}
+
