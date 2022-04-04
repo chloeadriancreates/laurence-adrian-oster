@@ -1,0 +1,47 @@
+.menu {
+    @include flex(row, end, center);
+    padding: 50px;
+
+    &_item {
+        @include yanoneKaffeesatz(calc(30rem / 16));
+        @include resetLink;
+        @include flex(column, center, center);
+
+        &:not(:last-of-type) {
+            padding-right: calc(50rem / 16);
+        }
+
+        &:last-of-type {
+            margin-right: 12.5%;
+        }
+
+        &::after {
+            @include transition;
+            @include customUnderline;
+        }
+
+        &:hover {
+            color: $primary--bright;
+
+            .menu_item::after {
+                width: 100%;
+            }
+        }
+    }
+
+    &_button {
+        @include yanoneKaffeesatz(calc(30rem / 16));
+        @include transition;
+        background-color: white;
+        border-radius: 15px;
+        padding: calc(20rem / 16) calc(40rem / 16);
+        border: none;
+        box-shadow: none;
+        cursor: pointer;
+
+        &:hover, &:focus {
+            box-shadow: 7px 7px 0px 0px black;
+            transform: translate(-7px, -7px);
+        }
+    }
+}

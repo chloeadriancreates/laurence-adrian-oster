@@ -7,10 +7,16 @@ body, h1, h2, h3, h4, h5, h6, p, ul, li {
   padding: 0;
 }
 
+img {
+  max-width: 100%;
+}
+
 body {
   font-family: "Yanone Kaffeesatz", sans-serif;
   font-size: 1.25rem;
   letter-spacing: 0.0375rem;
+  line-height: 140%;
+  max-width: 100%;
 }
 
 .menu {
@@ -24,6 +30,7 @@ body {
   font-family: "Yanone Kaffeesatz", sans-serif;
   font-size: 1.875rem;
   letter-spacing: 0.05625rem;
+  line-height: 140%;
   color: black;
   text-decoration: none;
   display: flex;
@@ -41,9 +48,11 @@ body {
   transition: all 0.4s ease;
   content: "";
   width: 0%;
-  margin-top: 1px;
   height: 1px;
   background-color: black;
+}
+.menu_item:hover {
+  color: #C6B3FF;
 }
 .menu_item:hover .menu_item::after {
   width: 100%;
@@ -52,6 +61,7 @@ body {
   font-family: "Yanone Kaffeesatz", sans-serif;
   font-size: 1.875rem;
   letter-spacing: 0.05625rem;
+  line-height: 140%;
   transition: all 0.4s ease;
   background-color: white;
   border-radius: 15px;
@@ -61,7 +71,7 @@ body {
   cursor: pointer;
 }
 .menu_button:hover, .menu_button:focus {
-  box-shadow: 7px 7px 0px 0px #C6B3FF;
+  box-shadow: 7px 7px 0px 0px black;
   transform: translate(-7px, -7px);
 }
 
@@ -80,13 +90,167 @@ body {
 .hero_title {
   font-family: "Yeseva One", cursive;
   font-size: 7.5rem;
+  font-weight: normal;
+  line-height: 110%;
   margin: 100px 50px 3.125rem 50px;
 }
 .hero_subtitle {
   font-family: "Yanone Kaffeesatz", sans-serif;
   font-size: 5.625rem;
   letter-spacing: 0.16875rem;
+  line-height: 140%;
   margin: 0px 50px;
+}
+.hero_subtitle:last-of-type {
+  margin-bottom: 300px;
+}
+
+h2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Yeseva One", cursive;
+  font-size: 3.4375rem;
+  font-weight: normal;
+  line-height: 110%;
+  width: fit-content;
+}
+h2::after {
+  content: "";
+  width: 100%;
+  height: 3px;
+  background-color: #C6B3FF;
+}
+
+.cabinet {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 50px;
+}
+.cabinet_icon {
+  width: 12%;
+}
+.cabinet_icon_row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 55px;
+}
+.cabinet_description {
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  font-size: 1.4375rem;
+  letter-spacing: 0.043125rem;
+  line-height: 140%;
+  text-align: center;
+  width: 12%;
+}
+.cabinet_description_row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+.cabinet_photos {
+  margin: 50px;
+}
+.cabinet_photos_row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.cabinet_photos_row:last-of-type {
+  margin-top: 50px;
+}
+.cabinet_photos_square {
+  width: 30%;
+}
+.cabinet_photos_square:last-of-type {
+  margin-left: 50px;
+}
+.cabinet_photos_rectangle {
+  width: 60%;
+}
+.cabinet_photos_rectangle:last-of-type {
+  margin-left: 50px;
+}
+
+.prestations {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.prestations_row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-top: 75px;
+}
+.prestations_image {
+  width: 50%;
+}
+.prestations_image--right {
+  box-shadow: 20px 20px 0px 0px #C6B3FF;
+}
+.prestations_image--left {
+  box-shadow: -20px 20px 0px 0px #C6B3FF;
+}
+.prestations_caption {
+  margin: 0px 50px 0px 70px;
+}
+.prestations_title {
+  font-family: "Yeseva One", cursive;
+  font-size: 2.375rem;
+  font-weight: normal;
+  line-height: 110%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+.prestations_title::after {
+  content: "";
+  width: 20%;
+  height: 1px;
+  background-color: black;
+  margin: 1.125rem 0px;
+}
+.prestations_blob {
+  position: absolute;
+  z-index: -1;
+}
+.prestations_blob--1 {
+  right: 0;
+  top: -25px;
+  width: 21%;
+}
+.prestations_blob--2 {
+  left: 0;
+  top: -190px;
+  width: 21%;
+}
+.prestations_blob--3 {
+  right: 0;
+  top: -175px;
+  width: 21.5%;
+}
+.prestations_blob--4 {
+  left: 0;
+  top: -200px;
+  width: 24%;
+}
+.prestations_blob--5 {
+  right: 0;
+  top: -265px;
+  width: 19.5%;
 }
 
 /*# sourceMappingURL=style.css.map */

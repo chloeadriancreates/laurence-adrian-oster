@@ -1,0 +1,70 @@
+.prestations {
+    @include flex(column, center, center);
+
+    &_row {
+        @include flex;
+        position: relative;
+        margin-top: 75px;
+    }
+
+    &_image {
+        width: 50%;
+
+        &--right {
+            @include dropShadowRight;
+        }
+
+        &--left {
+            @include dropShadowLeft;
+        }
+    }
+
+    &_caption {
+        margin: 0px 50px 0px 70px;
+    }
+
+    &_title {
+        @include yesevaOne(calc(38rem / 16));
+        @include flex(column, center, start);
+
+        &::after {
+            @include customUnderline(20%, 1px, black);
+            margin: calc(18rem/16) 0px;
+        }
+    }
+
+    &_blob {
+        position: absolute;
+        z-index: -1;
+
+        &--1 {
+            right: 0;
+            top: -25px;
+            width: 21%;
+        }
+
+        &--2 {
+            left: 0;
+            top: -190px;
+            width: 21%;
+        }
+
+        &--3 {
+            right: 0;
+            top: -175px;
+            width: 21.5%;
+        }
+
+        &--4 {
+            left: 0;
+            top: -200px;
+            width: 24%;
+        }
+
+        &--5 {
+            right: 0;
+            top: -265px;
+            width: 19.5%;
+        }
+    }
+}

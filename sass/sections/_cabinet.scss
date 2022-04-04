@@ -1,0 +1,62 @@
+h2 {
+    @include flex(column, center, center);
+    @include yesevaOne(calc(55rem / 16));
+    width: fit-content;
+
+    &::after {
+        @include customUnderline(100%, 3px, $primary--bright);
+    }
+}
+
+.cabinet {
+    @include flex(column, center, center);
+    margin: 50px;
+
+    &_icon { 
+        width: 12%;
+
+        &_row {
+            @include flex(row, space-between, center);
+            margin-top: 55px;
+        }
+    }
+
+    &_description {
+        @include yanoneKaffeesatz(calc(23rem / 16));
+        text-align: center;
+        width: 12%;
+
+        &_row {
+            @include flex(row, space-between, center);
+            margin-top: 20px;
+        }
+    }
+
+    &_photos {
+        margin: 50px;
+
+        &_row {
+            @include flex;
+
+            &:last-of-type {
+                margin-top: 50px;
+            }
+        }
+
+        &_square {
+            width: 30%;
+
+            &:last-of-type {
+                margin-left: 50px;
+            }
+        }
+
+        &_rectangle {
+            width: 60%;
+
+            &:last-of-type {
+                margin-left: 50px;
+            }
+        }
+    }
+}

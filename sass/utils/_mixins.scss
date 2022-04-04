@@ -17,12 +17,15 @@
 @mixin yesevaOne($size: calc(38rem / 16)) {
     font-family: 'Yeseva One', cursive;
     font-size: $size;
+    font-weight: normal;
+    line-height: 110%;
 }
 
 @mixin yanoneKaffeesatz($size: calc(20rem / 16)) {
     font-family: 'Yanone Kaffeesatz', sans-serif;
     font-size: $size;
     letter-spacing: calc(($size / 100) * 3);
+    line-height: 140%;
 }
 
 @mixin dropShadowRight($size: 20px) {
@@ -31,4 +34,11 @@
 
 @mixin dropShadowLeft($size: 20px) {
     box-shadow: -$size $size 0px 0px $primary--bright;
+}
+
+@mixin customUnderline($width: 0%, $height: 1px, $color: black) {
+    content: "";
+    width: $width;
+    height: $height;
+    background-color: $color;
 }
