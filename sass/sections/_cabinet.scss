@@ -33,30 +33,30 @@ h2 {
     }
 
     &_photos {
-        margin: 50px;
+        margin: 50px 0px;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(2, auto);
+        gap: 50px;
 
-        &_row {
-            @include flex;
-
-            &:last-of-type {
-                margin-top: 50px;
-            }
+        &--1 {
+            grid-row: 1 / span 1;
+            grid-column: 1 / span 4;
         }
 
-        &_square {
-            width: 30%;
-
-            &:last-of-type {
-                margin-left: 50px;
-            }
+        &--2 {
+            grid-row: 1 / span 1;
+            grid-column: 5 / span 8;
         }
 
-        &_rectangle {
-            width: 60%;
+        &--3 {
+            grid-row: 2 / span 1;
+            grid-column: 1 / span 8;
+        }
 
-            &:last-of-type {
-                margin-left: 50px;
-            }
+        &--4 {
+            grid-row: 2 / span 1;
+            grid-column: 9 / span 4;
         }
     }
 }
