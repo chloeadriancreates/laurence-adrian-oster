@@ -12,7 +12,7 @@
         margin: 30px 0px calc(15rem / 16) 0px;
         
         &::after {
-            @include customUnderline(0%, Opx, black);
+            @include customUnderline(0%, 1px, black);
         }
     }
 

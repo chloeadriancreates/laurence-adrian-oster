@@ -1,0 +1,35 @@
+.mentions {
+    @include flex(column, center, center);
+    margin: 700px auto 0px auto;
+    max-width: 1000px;
+
+    &_title::after {
+        margin: calc(10rem / 16) 0px;
+    }
+
+    &_date {
+        @include yesevaOne(calc(25rem / 16));
+        margin-bottom: calc(45rem / 16);
+    }
+
+    &_subtitle {
+        @include flex(column, center, start);
+        @include yesevaOne(calc(38rem / 16));
+        margin-top: calc(45rem / 16);
+
+        &::after {
+            @include customUnderline(100px, 1px, black);
+            margin: calc(10rem / 16) 0px;
+        }
+    }
+
+    &_link {
+        @include resetLink;
+        @include transition(0.3s);
+        font-weight:400;
+
+        &:hover {
+            color: $primary--bright;
+        }
+    }
+}

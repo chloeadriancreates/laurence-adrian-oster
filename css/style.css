@@ -27,6 +27,21 @@ body {
   align-items: center;
   padding: 50px;
 }
+.menu_title {
+  font-family: "Yeseva One", cursive;
+  font-size: 1.875rem;
+  font-weight: normal;
+  line-height: 110%;
+  width: 30%;
+  display: none;
+}
+.menu_contents {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
+  width: 70%;
+}
 .menu_item {
   font-family: "Yanone Kaffeesatz", sans-serif;
   font-size: 1.875rem;
@@ -277,7 +292,7 @@ h2::after {
 .footer_title::after {
   content: "";
   width: 0%;
-  height: Opx;
+  height: 1px;
   background-color: black;
 }
 .footer_subtitle {
@@ -334,6 +349,52 @@ h2::after {
 }
 .footer_link:hover::after, .footer_link:focus::after {
   width: 100%;
+}
+
+.mentions {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 700px auto 0px auto;
+  max-width: 1000px;
+}
+.mentions_title::after {
+  margin: 0.625rem 0px;
+}
+.mentions_date {
+  font-family: "Yeseva One", cursive;
+  font-size: 1.5625rem;
+  font-weight: normal;
+  line-height: 110%;
+  margin-bottom: 2.8125rem;
+}
+.mentions_subtitle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  font-family: "Yeseva One", cursive;
+  font-size: 2.375rem;
+  font-weight: normal;
+  line-height: 110%;
+  margin-top: 2.8125rem;
+}
+.mentions_subtitle::after {
+  content: "";
+  width: 100px;
+  height: 1px;
+  background-color: black;
+  margin: 0.625rem 0px;
+}
+.mentions_link {
+  color: black;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-weight: 400;
+}
+.mentions_link:hover {
+  color: #C6B3FF;
 }
 
 /*# sourceMappingURL=style.css.map */

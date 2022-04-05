@@ -2,6 +2,17 @@
     @include flex(row, end, center);
     padding: 50px;
 
+    &_title {
+        @include yesevaOne(calc(30rem / 16));
+        width: 30%;
+        display: none;
+    }
+
+    &_contents {
+        @include flex(row, end, center);
+        width: 70%;
+    }
+
     &_item {
         @include yanoneKaffeesatz(calc(30rem / 16));
         @include resetLink;
