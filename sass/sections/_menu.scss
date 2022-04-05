@@ -8,7 +8,7 @@
         @include flex(column, center, center);
 
         &:not(:last-of-type) {
-            padding-right: calc(50rem / 16);
+            margin-right: calc(50rem / 16);
         }
 
         &:last-of-type {
@@ -20,12 +20,8 @@
             @include customUnderline;
         }
 
-        &:hover {
-            color: $primary--bright;
-
-            .menu_item::after {
-                width: 100%;
-            }
+        &:hover::after, &:focus::after {
+            width: 100%;
         }
     }
 
