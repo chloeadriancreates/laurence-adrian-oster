@@ -1,31 +1,32 @@
 .hero {
-    &_background {
-        width: 100%;
-        position: absolute;
-        z-index: -1;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 180px 1fr;
+    width: 100%;
+
+    &_picture, &_color {
+        grid-row: 1 / span 2;
+        grid-column: 1 / span 12;
     }
 
-    &_picture {
-        width: 100%;
-    }
-
-    &_color {
-        width: 100%;
-        position: absolute;
+    &_content {
+        @include flex(column, start, start);
+        grid-row: 2 / span 1;
+        grid-column: 1 / span 8;
+        margin: calc(100rem / 16) 0px 0px 50px;
     }
 
     &_title {
         @include yesevaOne(calc(120rem / 16));
-        margin: 100px 50px calc(50rem / 16) 50px;
+        margin-bottom: calc(50rem / 16);
+
+        &:last-child {
+            margin-top: calc(30rem / 16);
+        }
     }
 
     &_subtitle {
         @include yanoneKaffeesatz(calc(90rem / 16));
-        margin: 0px 50px;
-
-        &:last-of-type {
-            margin-bottom: 300px;
-        }
     }
 }
 

@@ -1,6 +1,6 @@
 .rdv {
     @include flex(column, center, center);
-    margin: 700px 50px 0px 50px;
+    margin: 100px 50px 0px 50px;
 
     &_title {
         @include yesevaOne(calc(30rem / 16));
