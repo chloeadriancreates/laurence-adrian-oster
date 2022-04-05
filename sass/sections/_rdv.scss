@@ -1,0 +1,29 @@
+.rdv {
+    @include flex(column, center, center);
+    margin: 700px 50px 0px 50px;
+
+    &_title {
+        @include yesevaOne(calc(30rem / 16));
+        @include flex(column, center, center);
+        width: fit-content;
+
+        &::after {
+            @include customUnderline(100%, 3px, $primary--bright);
+            margin-top: 3px;
+        }
+    }
+
+    &_number {
+        font-size: calc(70rem / 16);
+        margin: calc(25rem / 16);
+
+        &::after {
+            @include customUnderline(0%, 1px, black);
+        }
+    }
+
+    &_copy {
+        font-size: calc(25rem / 16);
+        line-height: 145%;
+    }
+}

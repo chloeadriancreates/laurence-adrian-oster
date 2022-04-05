@@ -397,4 +397,44 @@ h2::after {
   color: #C6B3FF;
 }
 
+.rdv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 700px 50px 0px 50px;
+}
+.rdv_title {
+  font-family: "Yeseva One", cursive;
+  font-size: 1.875rem;
+  font-weight: normal;
+  line-height: 110%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+}
+.rdv_title::after {
+  content: "";
+  width: 100%;
+  height: 3px;
+  background-color: #C6B3FF;
+  margin-top: 3px;
+}
+.rdv_number {
+  font-size: 4.375rem;
+  margin: 1.5625rem;
+}
+.rdv_number::after {
+  content: "";
+  width: 0%;
+  height: 1px;
+  background-color: black;
+}
+.rdv_copy {
+  font-size: 1.5625rem;
+  line-height: 145%;
+}
+
 /*# sourceMappingURL=style.css.map */
