@@ -1,18 +1,30 @@
 .footer {
     @include flex(row, space-between, end);
     width: 100%;
-    background-image: url('../img/footer.png');
+    background-image: url('../img/desktop/footer.png');
     background-repeat: no-repeat;
     background-size: cover;
     margin-top: 120px;
     padding: 50px;
 
+    @include mobile {
+        @include flex(column, start, start);
+        background-image: url('../img/mobile/footer.png');
+        margin-top: 80px;
+    }
+
     &_title {
         @include yesevaOne(calc(38rem / 16));
         margin: 30px 0px calc(15rem / 16) 0px;
+        text-align: left;
         
         &::after {
             @include customUnderline(0%, 1px, black);
+        }
+
+        @include mobile {
+            font-size: calc(24rem / 16);
+            margin-top: 10px;
         }
     }
 
@@ -27,10 +39,19 @@
                 margin: calc(15rem / 16) 0px;
             }
         }
+
+        @include mobile {
+            font-size: calc(20rem / 16);
+        }
     }
 
     &_credits {
         @include flex(column, center, end);
+
+        @include mobile {
+            align-items: start;
+            margin-top: calc(24rem / 16);
+        }
 
         &_text {
             @include flex;

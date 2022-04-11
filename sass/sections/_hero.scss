@@ -14,11 +14,22 @@
         grid-row: 2 / span 1;
         grid-column: 1 / span 8;
         margin: calc(100rem / 16) 0px 0px 50px;
+
+        @include mobile {
+            grid-row: 1 / span 2;
+            grid-column: 1 / span 12;
+            margin: 30px;
+        }
     }
 
     &_title {
         @include yesevaOne(calc(120rem / 16));
         margin-bottom: calc(50rem / 16);
+
+        @include mobile {
+            font-size: calc(48rem / 16);
+            margin-bottom: calc(15rem / 16);
+        }
 
         &:last-child {
             margin-top: calc(30rem / 16);
@@ -27,6 +38,10 @@
 
     &_subtitle {
         @include yanoneKaffeesatz(calc(90rem / 16));
+
+        @include mobile {
+            font-size: calc(40rem / 16);
+        }
     }
 }
 

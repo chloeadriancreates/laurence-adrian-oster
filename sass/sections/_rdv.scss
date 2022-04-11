@@ -6,10 +6,15 @@
         @include yesevaOne(calc(30rem / 16));
         @include flex(column, center, center);
         width: fit-content;
+        text-align: center;
 
         &::after {
             @include customUnderline(100%, 3px, $primary--bright);
             margin-top: 3px;
+
+            @include mobile {
+                width: 0%;
+            }
         }
     }
 
@@ -25,5 +30,6 @@
     &_copy {
         font-size: calc(25rem / 16);
         line-height: 145%;
+        text-align: center;
     }
 }

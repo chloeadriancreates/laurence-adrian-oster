@@ -3,6 +3,10 @@
     margin: 50px auto 0px auto;
     max-width: 1000px;
 
+    @include mobile {
+        margin: 50px;
+    }
+
     &_title::after {
         margin: calc(10rem / 16) 0px;
     }

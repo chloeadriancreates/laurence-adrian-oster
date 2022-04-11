@@ -5,27 +5,59 @@
         @include flex;
         position: relative;
         margin-top: 75px;
+
+        @include mobile {
+            flex-direction: column;
+        }
+
+        &--reverse {
+            @include mobile {
+                flex-direction: column-reverse;
+            }
+        }
     }
 
     &_image {
         width: 50%;
 
+        @include mobile {
+            width: 90%;
+        }
+
         &--right {
             @include dropShadowRight;
+
+            @include mobile {
+                @include dropShadowRight(10px);
+                align-self: start;
+            }
         }
 
         &--left {
             @include dropShadowLeft;
+
+            @include mobile {
+                @include dropShadowLeft(10px);
+                align-self: end;
+            }
         }
     }
 
     &_caption {
         &--right {
             margin: 0px 50px 0px 70px;
+
+            @include mobile {
+                margin: 50px;
+            }
         }
 
         &--left {
             margin: 0px 70px 0px 50px;
+
+            @include mobile {
+                margin: 50px;
+            }
         }
     }
 
@@ -36,6 +68,10 @@
         &::after {
             @include customUnderline(20%, 1px, black);
             margin: calc(18rem/16) 0px;
+        }
+
+        @include mobile {
+            font-size: calc(24rem / 16);
         }
     }
 
@@ -51,30 +87,55 @@
             right: 0;
             top: -25px;
             width: 21%;
+
+            @include mobile {
+                top: 93px;
+                width: 38%;
+            }
         }
 
         &--2 {
             left: 0;
             top: -190px;
             width: 21%;
+
+            @include mobile {
+                top: 118px;
+                width: 49%;
+            }
         }
 
         &--3 {
             right: 0;
             top: -175px;
             width: 21.5%;
+
+            @include mobile {
+                top: 93px;
+                width: 45%;
+            }
         }
 
         &--4 {
             left: 0;
             top: -200px;
             width: 24%;
+
+            @include mobile {
+                top: 129px;
+                width: 37%;
+            }
         }
 
         &--5 {
             right: 0;
             top: -265px;
             width: 19.5%;
+
+            @include mobile {
+                top: 162px;
+                width: 41%;
+            }
         }
     }
 }

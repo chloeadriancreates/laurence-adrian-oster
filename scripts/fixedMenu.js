@@ -3,6 +3,7 @@ const menu = document.getElementById('menu');
 const menuHeight = menu.offsetHeight;
 const menuTitle = document.querySelector('.menu_title');
 const menuButton = document.querySelector('.menu_button');
+const footer = document.querySelector('.footer');
 
 /* Fixed menu */
 function fixedMenu() {
@@ -20,5 +21,9 @@ function fixedMenu() {
 }
 
 window.onscroll = function() {
-    fixedMenu();
+    if(window.width > 500) {
+        fixedMenu();
+    } else {
+        footer.style.paddingBottom = menuHeight + 50 + 'px';
+    }
 }

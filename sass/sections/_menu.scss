@@ -5,6 +5,16 @@
     grid-column: 1 / span 12;
     padding: 50px;
 
+    @include mobile {
+        justify-content: center;
+        background-color: $primary--bright;
+        position: fixed;
+        bottom: 0;
+        z-index: 99;
+        width: 100%;
+        padding: 30px;
+    }
+
     &--fixed {
         @include transition;
         padding: 25px 50px;
@@ -22,6 +32,10 @@
         @include transition;
         @include resetLink;
         opacity: 0;
+
+        @include mobile {
+            display: none;
+        }
     }
 
     &_contents {
@@ -49,6 +63,10 @@
         &:hover::after, &:focus::after {
             width: 100%;
         }
+
+        @include mobile {
+            display: none;
+        }
     }
 
     &_button {
@@ -62,6 +80,11 @@
         border: none;
         box-shadow: none;
         cursor: pointer;
+
+        @include mobile {
+            margin-left: 0px;
+            font-size: calc(28rem / 16);
+        }
 
         &--fixed {
             background-color: $primary--bright;

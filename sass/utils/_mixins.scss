@@ -43,3 +43,9 @@
     height: $height;
     background-color: $color;
 }
+
+@mixin mobile {
+    @media screen and (max-width: 500px){
+        @content;
+    }
+}

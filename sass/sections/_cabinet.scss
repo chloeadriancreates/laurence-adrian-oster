@@ -2,9 +2,19 @@ h2 {
     @include flex(column, center, center);
     @include yesevaOne(calc(55rem / 16));
     width: fit-content;
+    text-align: center;
 
     &::after {
         @include customUnderline(100%, 3px, $primary--bright);
+
+        @include mobile {
+            width: 0px;
+        }
+    }
+
+    @include mobile {
+        font-size: calc(30rem / 16);
+        text-align: center;
     }
 }
 
@@ -19,6 +29,11 @@ h2 {
         grid-template-rows: repeat(2, auto);
         column-gap: 60px;
         row-gap: 30px;
+
+        @include mobile {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(6, auto);
+        }
     }
 
     &_description {
@@ -38,12 +53,79 @@ h2 {
         }
     }
 
+    @include mobile {
+        &_icon--1 {
+            grid-row: 1 / span 1;
+            grid-column: 1 / span 1;
+        }
+
+        &_description--1 {
+            grid-row: 2 / span 1;
+            grid-column: 1 / span 1;
+        }
+
+        &_icon--2 {
+            grid-row: 1 / span 1;
+            grid-column: 2 / span 1;
+        }
+
+        &_description--2 {
+            grid-row: 2 / span 1;
+            grid-column: 2 / span 1;
+        }
+
+        &_icon--3 {
+            grid-row: 3 / span 1;
+            grid-column: 1 / span 1;
+        }
+
+        &_description--3 {
+            grid-row: 4 / span 1;
+            grid-column: 1 / span 1;
+        }
+
+        &_icon--4 {
+            grid-row: 3 / span 1;
+            grid-column: 2 / span 1;
+        }
+
+        &_description--4 {
+            grid-row: 4 / span 1;
+            grid-column: 2 / span 1;
+        }
+
+        &_icon--5 {
+            grid-row: 5 / span 1;
+            grid-column: 1 / span 1;
+        }
+
+        &_description--5 {
+            grid-row: 6 / span 1;
+            grid-column: 1 / span 1;
+        }
+
+        &_icon--6 {
+            grid-row: 5 / span 1;
+            grid-column: 2 / span 1;
+        }
+
+        &_description--6 {
+            grid-row: 6 / span 1;
+            grid-column: 2 / span 1;
+        }
+    }
+
     &_photos {
         margin: 50px 0px;
         display: grid;
         grid-template-columns: repeat(12, 1fr);
         grid-template-rows: repeat(2, auto);
         gap: 50px;
+
+        @include mobile {
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(4, auto);
+        }
 
         &--1 {
             grid-row: 1 / span 1;
@@ -63,6 +145,17 @@ h2 {
         &--4 {
             grid-row: 2 / span 1;
             grid-column: 9 / span 4;
+        }
+
+        @include mobile {
+            @for $i from 1 through 4 {
+                &--#{$i} {
+                    aspect-ratio: 1.5 / 1;
+                    object-fit: cover;
+                    grid-row: #{$i} / span 1;
+                    grid-column: 1 / span 1;
+                }
+            }
         }
     }
 }
