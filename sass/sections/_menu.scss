@@ -1,12 +1,26 @@
 .menu {
     @include flex(row, space-between, center);
+    @include transition;
     grid-row: 1 / span 1;
     grid-column: 1 / span 12;
-    margin: 50px;
+    padding: 50px;
+
+    &--fixed {
+        @include transition;
+        padding: 25px 50px;
+        background: white;
+        overflow: hidden;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 99;
+        box-shadow: 0px 5px 30px 0px rgb(86 25 59 / 10%);
+    }
 
     &_title {
         @include yesevaOne(calc(30rem / 16));
         @include transition;
+        @include resetLink;
         opacity: 0;
     }
 
@@ -18,6 +32,10 @@
         @include yanoneKaffeesatz(calc(30rem / 16));
         @include resetLink;
         @include flex(column, center, center);
+        background: none;
+        border: none;
+        box-shadow: none;
+        cursor: pointer;
 
         &:first-of-type {
             margin-right: calc(50rem / 16);
@@ -36,6 +54,7 @@
     &_button {
         @include yanoneKaffeesatz(calc(30rem / 16));
         @include transition;
+        @include resetLink;
         background-color: white;
         border-radius: 15px;
         margin-left: calc(80rem / 16);
@@ -43,6 +62,10 @@
         border: none;
         box-shadow: none;
         cursor: pointer;
+
+        &--fixed {
+            background-color: $primary--bright;
+        }
 
         &:hover, &:focus {
             box-shadow: 7px 7px 0px 0px black;

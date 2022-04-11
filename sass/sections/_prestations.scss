@@ -20,7 +20,13 @@
     }
 
     &_caption {
-        margin: 0px 50px 0px 70px;
+        &--right {
+            margin: 0px 50px 0px 70px;
+        }
+
+        &--left {
+            margin: 0px 70px 0px 50px;
+        }
     }
 
     &_title {
@@ -31,6 +37,10 @@
             @include customUnderline(20%, 1px, black);
             margin: calc(18rem/16) 0px;
         }
+    }
+
+    &_copy {
+        text-align: justify;
     }
 
     &_blob {

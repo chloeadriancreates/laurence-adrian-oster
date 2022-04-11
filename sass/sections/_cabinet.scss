@@ -12,23 +12,29 @@ h2 {
     @include flex(column, center, center);
     margin: 50px;
 
-    &_icon { 
-        width: 12%;
-
-        &_row {
-            @include flex(row, space-between, center);
-            margin-top: 55px;
-        }
+    &_icons {
+        margin-top: 50px;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(2, auto);
+        column-gap: 60px;
+        row-gap: 30px;
     }
 
     &_description {
         @include yanoneKaffeesatz(calc(23rem / 16));
         text-align: center;
-        width: 12%;
+    }
 
-        &_row {
-            @include flex(row, space-between, center);
-            margin-top: 20px;
+    @for $i from 1 through 6 {
+        &_icon--#{$i} {
+            grid-row: 1 / span 1;
+            grid-column: #{$i} / span 1;
+        }
+
+        &_description--#{$i} {
+            grid-row: 2 / span 1;
+            grid-column: #{$i} / span 1;
         }
     }
 

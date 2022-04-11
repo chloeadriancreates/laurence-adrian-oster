@@ -25,9 +25,21 @@ body {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  transition: all 0.4s ease;
   grid-row: 1/span 1;
   grid-column: 1/span 12;
-  margin: 50px;
+  padding: 50px;
+}
+.menu--fixed {
+  transition: all 0.4s ease;
+  padding: 25px 50px;
+  background: white;
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 99;
+  box-shadow: 0px 5px 30px 0px rgba(86, 25, 59, 0.1);
 }
 .menu_title {
   font-family: "Yeseva One", cursive;
@@ -35,6 +47,8 @@ body {
   font-weight: normal;
   line-height: 110%;
   transition: all 0.4s ease;
+  color: black;
+  text-decoration: none;
   opacity: 0;
 }
 .menu_contents {
@@ -55,6 +69,10 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background: none;
+  border: none;
+  box-shadow: none;
+  cursor: pointer;
 }
 .menu_item:first-of-type {
   margin-right: 3.125rem;
@@ -76,6 +94,8 @@ body {
   letter-spacing: 0.05625rem;
   line-height: 140%;
   transition: all 0.4s ease;
+  color: black;
+  text-decoration: none;
   background-color: white;
   border-radius: 15px;
   margin-left: 5rem;
@@ -83,6 +103,9 @@ body {
   border: none;
   box-shadow: none;
   cursor: pointer;
+}
+.menu_button--fixed {
+  background-color: #C6B3FF;
 }
 .menu_button:hover, .menu_button:focus {
   box-shadow: 7px 7px 0px 0px black;
@@ -151,15 +174,13 @@ h2::after {
   align-items: center;
   margin: 50px;
 }
-.cabinet_icon {
-  width: 12%;
-}
-.cabinet_icon_row {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 55px;
+.cabinet_icons {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(2, auto);
+  column-gap: 60px;
+  row-gap: 30px;
 }
 .cabinet_description {
   font-family: "Yanone Kaffeesatz", sans-serif;
@@ -168,14 +189,54 @@ h2::after {
   letter-spacing: 0.043125rem;
   line-height: 140%;
   text-align: center;
-  width: 12%;
 }
-.cabinet_description_row {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 20px;
+.cabinet_icon--1 {
+  grid-row: 1/span 1;
+  grid-column: 1/span 1;
+}
+.cabinet_description--1 {
+  grid-row: 2/span 1;
+  grid-column: 1/span 1;
+}
+.cabinet_icon--2 {
+  grid-row: 1/span 1;
+  grid-column: 2/span 1;
+}
+.cabinet_description--2 {
+  grid-row: 2/span 1;
+  grid-column: 2/span 1;
+}
+.cabinet_icon--3 {
+  grid-row: 1/span 1;
+  grid-column: 3/span 1;
+}
+.cabinet_description--3 {
+  grid-row: 2/span 1;
+  grid-column: 3/span 1;
+}
+.cabinet_icon--4 {
+  grid-row: 1/span 1;
+  grid-column: 4/span 1;
+}
+.cabinet_description--4 {
+  grid-row: 2/span 1;
+  grid-column: 4/span 1;
+}
+.cabinet_icon--5 {
+  grid-row: 1/span 1;
+  grid-column: 5/span 1;
+}
+.cabinet_description--5 {
+  grid-row: 2/span 1;
+  grid-column: 5/span 1;
+}
+.cabinet_icon--6 {
+  grid-row: 1/span 1;
+  grid-column: 6/span 1;
+}
+.cabinet_description--6 {
+  grid-row: 2/span 1;
+  grid-column: 6/span 1;
 }
 .cabinet_photos {
   margin: 50px 0px;
@@ -224,8 +285,11 @@ h2::after {
 .prestations_image--left {
   box-shadow: -20px 20px 0px 0px #C6B3FF;
 }
-.prestations_caption {
+.prestations_caption--right {
   margin: 0px 50px 0px 70px;
+}
+.prestations_caption--left {
+  margin: 0px 70px 0px 50px;
 }
 .prestations_title {
   font-family: "Yeseva One", cursive;
@@ -243,6 +307,9 @@ h2::after {
   height: 1px;
   background-color: black;
   margin: 1.125rem 0px;
+}
+.prestations_copy {
+  text-align: justify;
 }
 .prestations_blob {
   position: absolute;
