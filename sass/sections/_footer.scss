@@ -7,10 +7,18 @@
     margin-top: 120px;
     padding: 50px;
 
-    @include mobile {
+    @include tablet-m {
+        margin-top: 50px;
+    }
+
+    @include mobile-xl {
         @include flex(column, start, start);
         background-image: url('../img/mobile/footer.png');
         margin-top: 80px;
+    }
+
+    @include mobile-s {
+        margin-top: 30px;
     }
 
     &_title {
@@ -22,7 +30,7 @@
             @include customUnderline(0%, 1px, black);
         }
 
-        @include mobile {
+        @include mobile-xl {
             font-size: calc(24rem / 16);
             margin-top: 10px;
         }
@@ -40,17 +48,33 @@
             }
         }
 
-        @include mobile {
+        @include mobile-xl {
             font-size: calc(20rem / 16);
+        }
+    }
+
+    &_address {
+        @include mobile-s {
+            font-size: 1.1rem;
         }
     }
 
     &_credits {
         @include flex(column, center, end);
+        text-align: right;
 
-        @include mobile {
+        @include tablet-l {
+            font-size: calc(17rem / 16);
+        }
+
+        @include mobile-xl {
             align-items: start;
+            text-align: left;
             margin-top: calc(24rem / 16);
+        }
+
+        @include mobile-s {
+            font-size: 1.1rem;
         }
 
         &_text {

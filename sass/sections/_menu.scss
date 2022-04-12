@@ -5,7 +5,7 @@
     grid-column: 1 / span 12;
     padding: 50px;
 
-    @include mobile {
+    @include desktop-s {
         justify-content: center;
         background-color: $primary--bright;
         position: fixed;
@@ -33,7 +33,7 @@
         @include resetLink;
         opacity: 0;
 
-        @include mobile {
+        @include desktop-s {
             display: none;
         }
     }
@@ -64,7 +64,15 @@
             width: 100%;
         }
 
-        @include mobile {
+        @include desktop-l {
+            font-size: calc(25rem / 16);
+        }
+
+        @include desktop-m {
+            font-size: calc(20rem / 16);
+        }
+
+        @include desktop-s {
             display: none;
         }
     }
@@ -81,9 +89,21 @@
         box-shadow: none;
         cursor: pointer;
 
-        @include mobile {
+        @include desktop-l {
+            font-size: calc(25rem / 16);
+        }
+
+        @include desktop-m {
+            font-size: calc(20rem / 16);
+        }
+
+        @include desktop-s {
             margin-left: 0px;
-            font-size: calc(28rem / 16);
+            font-size: calc(24rem / 16);
+        }
+
+        @include mobile-s {
+            font-size: calc(20rem / 16);
         }
 
         &--fixed {

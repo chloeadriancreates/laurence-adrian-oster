@@ -44,8 +44,62 @@
     background-color: $color;
 }
 
-@mixin mobile {
+@mixin mobile-s {
+    @media screen and (max-width: 320px){
+        @content;
+    }
+}
+
+@mixin mobile-m {
+    @media screen and (max-width: 375px){
+        @content;
+    }
+}
+
+@mixin mobile-l {
     @media screen and (max-width: 500px){
+        @content;
+    }
+}
+
+@mixin mobile-xl {
+    @media screen and (max-width: 600px){
+        @content;
+    }
+}
+
+@mixin tablet-s {
+    @media screen and (max-width: 775px){
+        @content;
+    }
+}
+
+@mixin tablet-m {
+    @media screen and (max-width: 870px){
+        @content;
+    }
+}
+
+@mixin tablet-l {
+    @media screen and (max-width: 950px){
+        @content;
+    }
+}
+
+@mixin desktop-s {
+    @media screen and (max-width: 1100px){
+        @content;
+    }
+}
+
+@mixin desktop-m {
+    @media screen and (max-width: 1200px){
+        @content;
+    }
+}
+
+@mixin desktop-l {
+    @media screen and (max-width: 1400px){
         @content;
     }
 }

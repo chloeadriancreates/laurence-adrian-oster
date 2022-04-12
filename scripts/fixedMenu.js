@@ -21,7 +21,7 @@ function fixedMenu() {
 }
 
 window.onscroll = function() {
-    if(window.width > 500) {
+    if(window.width > 1100) {
         fixedMenu();
     } else {
         footer.style.paddingBottom = menuHeight + 50 + 'px';

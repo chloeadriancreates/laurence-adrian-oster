@@ -1,17 +1,21 @@
 .prestations {
     @include flex(column, center, center);
 
+    & h2 {
+        margin: 0px 50px;
+    }
+
     &_row {
         @include flex;
         position: relative;
         margin-top: 75px;
 
-        @include mobile {
+        @include tablet-m {
             flex-direction: column;
         }
 
         &--reverse {
-            @include mobile {
+            @include tablet-m {
                 flex-direction: column-reverse;
             }
         }
@@ -20,14 +24,14 @@
     &_image {
         width: 50%;
 
-        @include mobile {
+        @include tablet-m {
             width: 90%;
         }
 
         &--right {
             @include dropShadowRight;
 
-            @include mobile {
+            @include tablet-m {
                 @include dropShadowRight(10px);
                 align-self: start;
             }
@@ -36,7 +40,7 @@
         &--left {
             @include dropShadowLeft;
 
-            @include mobile {
+            @include tablet-m {
                 @include dropShadowLeft(10px);
                 align-self: end;
             }
@@ -47,7 +51,7 @@
         &--right {
             margin: 0px 50px 0px 70px;
 
-            @include mobile {
+            @include tablet-m {
                 margin: 50px;
             }
         }
@@ -55,7 +59,7 @@
         &--left {
             margin: 0px 70px 0px 50px;
 
-            @include mobile {
+            @include tablet-m {
                 margin: 50px;
             }
         }
@@ -70,13 +74,25 @@
             margin: calc(18rem/16) 0px;
         }
 
-        @include mobile {
+        @include desktop-s {
             font-size: calc(24rem / 16);
+        }
+
+        @include tablet-l {
+            font-size: calc(20rem / 16);
+        }
+
+        @include tablet-m {
+            font-size: calc(38rem / 16);
         }
     }
 
     &_copy {
         text-align: justify;
+
+        @include tablet-m {
+            text-align: left;
+        }
     }
 
     &_blob {
@@ -88,7 +104,7 @@
             top: -25px;
             width: 21%;
 
-            @include mobile {
+            @include tablet-m {
                 top: 93px;
                 width: 38%;
             }
@@ -99,7 +115,7 @@
             top: -190px;
             width: 21%;
 
-            @include mobile {
+            @include tablet-m {
                 top: 118px;
                 width: 49%;
             }
@@ -110,7 +126,7 @@
             top: -175px;
             width: 21.5%;
 
-            @include mobile {
+            @include tablet-m {
                 top: 93px;
                 width: 45%;
             }
@@ -121,7 +137,7 @@
             top: -200px;
             width: 24%;
 
-            @include mobile {
+            @include tablet-m {
                 top: 129px;
                 width: 37%;
             }
@@ -132,7 +148,7 @@
             top: -265px;
             width: 19.5%;
 
-            @include mobile {
+            @include tablet-m {
                 top: 162px;
                 width: 41%;
             }

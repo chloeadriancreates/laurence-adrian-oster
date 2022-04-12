@@ -12,7 +12,7 @@
             @include customUnderline(100%, 3px, $primary--bright);
             margin-top: 3px;
 
-            @include mobile {
+            @include mobile-l {
                 width: 0%;
             }
         }
