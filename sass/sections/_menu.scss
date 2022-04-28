@@ -1,9 +1,9 @@
 .menu {
     @include flex(row, space-between, center);
-    @include transition;
+    @include transition(0.3s);
     grid-row: 1 / span 1;
     grid-column: 1 / span 12;
-    padding: 50px;
+    padding: 25px 50px;
 
     @include desktop-s {
         justify-content: center;
@@ -16,8 +16,7 @@
     }
 
     &--fixed {
-        @include transition;
-        padding: 25px 50px;
+        @include transition(0.3s);
         background: white;
         overflow: hidden;
         position: fixed;
@@ -29,7 +28,7 @@
 
     &_title {
         @include yesevaOne(calc(30rem / 16));
-        @include transition;
+        @include transition(0.3s);
         @include resetLink;
         opacity: 0;
 
@@ -91,10 +90,12 @@
 
         @include desktop-l {
             font-size: calc(25rem / 16);
+            margin-left: calc(75rem / 16);
         }
 
         @include desktop-m {
             font-size: calc(20rem / 16);
+            margin-left: calc(65rem / 16);
         }
 
         @include desktop-s {

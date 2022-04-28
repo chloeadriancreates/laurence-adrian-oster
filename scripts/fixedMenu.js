@@ -3,6 +3,7 @@ const menu = document.getElementById('menu');
 const menuHeight = menu.offsetHeight;
 const menuTitle = document.querySelector('.menu_title');
 const menuButton = document.querySelector('.menu_button');
+const heroContent = document.querySelector('.hero_content');
 const footer = document.querySelector('.footer');
 
 /* Fixed menu */
@@ -12,16 +13,18 @@ function fixedMenu() {
         menuButton.classList.add('menu_button--fixed');
         menuTitle.style.opacity = 1;
         menuTitle.setAttribute('tabindex', 0);
+        heroContent.style.paddingTop = menuHeight + 'px';
     } else {
         menu.classList.remove('menu--fixed');
         menuButton.classList.remove('menu_button--fixed');
         menuTitle.style.opacity = 0;
         menuTitle.setAttribute('tabindex', -1);
+        heroContent.style.paddingTop = 0;
     }
 }
 
 window.onscroll = function() {
-    if(window.width > 1100) {
+    if(window.innerWidth > 1100) {
         fixedMenu();
     } else {
         footer.style.paddingBottom = menuHeight + 50 + 'px';

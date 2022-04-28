@@ -48,6 +48,8 @@
     }
 
     &_caption {
+        width: 50%; 
+
         &--right {
             margin: 0px 50px 0px 70px;
 
@@ -62,6 +64,10 @@
             @include tablet-m {
                 margin: 50px;
             }
+        }
+
+        @include tablet-m {
+            width: auto;
         }
     }
 

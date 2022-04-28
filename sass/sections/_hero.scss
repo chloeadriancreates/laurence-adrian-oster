@@ -1,7 +1,7 @@
 .hero {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 180px 1fr;
+    grid-template-rows: auto 1fr;
     width: 100%;
 
     &_picture, &_color {
@@ -117,3 +117,8 @@
     }
 }
 
+.aside_hero_content, .aside_hero_picture {
+    @include mobile-xl {
+        display: none;
+    }
+}

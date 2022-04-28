@@ -14,6 +14,7 @@
     &_date {
         @include yesevaOne(calc(25rem / 16));
         margin-bottom: calc(45rem / 16);
+        text-align: center;
     }
 
     &_subtitle {

@@ -24,10 +24,10 @@ body {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  transition: all 0.4s ease;
+  transition: all 0.3s ease;
   grid-row: 1/span 1;
   grid-column: 1/span 12;
-  padding: 50px;
+  padding: 25px 50px;
 }
 @media screen and (max-width: 1100px) {
   .menu {
@@ -41,8 +41,7 @@ body {
   }
 }
 .menu--fixed {
-  transition: all 0.4s ease;
-  padding: 25px 50px;
+  transition: all 0.3s ease;
   background: white;
   overflow: hidden;
   position: fixed;
@@ -56,7 +55,7 @@ body {
   font-size: 1.875rem;
   font-weight: normal;
   line-height: 110%;
-  transition: all 0.4s ease;
+  transition: all 0.3s ease;
   color: black;
   text-decoration: none;
   opacity: 0;
@@ -137,11 +136,13 @@ body {
 @media screen and (max-width: 1400px) {
   .menu_button {
     font-size: 1.5625rem;
+    margin-left: 4.6875rem;
   }
 }
 @media screen and (max-width: 1200px) {
   .menu_button {
     font-size: 1.25rem;
+    margin-left: 4.0625rem;
   }
 }
 @media screen and (max-width: 1100px) {
@@ -166,7 +167,7 @@ body {
 .hero {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: 180px 1fr;
+  grid-template-rows: auto 1fr;
   width: 100%;
 }
 .hero_picture, .hero_color {
@@ -304,6 +305,12 @@ body {
 @media screen and (max-width: 375px) {
   .hero_subtitle {
     font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .aside_hero_content, .aside_hero_picture {
+    display: none;
   }
 }
 
@@ -602,24 +609,28 @@ h2::after {
   .cabinet_photos--1 {
     aspect-ratio: 1.5/1;
     object-fit: cover;
+    height: clamp(100px, 100%, 400px);
     grid-row: 1/span 1;
     grid-column: 1/span 1;
   }
   .cabinet_photos--2 {
     aspect-ratio: 1.5/1;
     object-fit: cover;
+    height: clamp(100px, 100%, 400px);
     grid-row: 2/span 1;
     grid-column: 1/span 1;
   }
   .cabinet_photos--3 {
     aspect-ratio: 1.5/1;
     object-fit: cover;
+    height: clamp(100px, 100%, 400px);
     grid-row: 3/span 1;
     grid-column: 1/span 1;
   }
   .cabinet_photos--4 {
     aspect-ratio: 1.5/1;
     object-fit: cover;
+    height: clamp(100px, 100%, 400px);
     grid-row: 4/span 1;
     grid-column: 1/span 1;
   }
@@ -678,6 +689,9 @@ h2::after {
     align-self: end;
   }
 }
+.prestations_caption {
+  width: 50%;
+}
 .prestations_caption--right {
   margin: 0px 50px 0px 70px;
 }
@@ -692,6 +706,11 @@ h2::after {
 @media screen and (max-width: 870px) {
   .prestations_caption--left {
     margin: 50px;
+  }
+}
+@media screen and (max-width: 870px) {
+  .prestations_caption {
+    width: auto;
   }
 }
 .prestations_title {
@@ -952,6 +971,7 @@ h2::after {
   font-weight: normal;
   line-height: 110%;
   margin-bottom: 2.8125rem;
+  text-align: center;
 }
 .mentions_subtitle {
   display: flex;
@@ -988,6 +1008,11 @@ h2::after {
   align-items: center;
   margin: 100px 50px 0px 50px;
 }
+@media screen and (max-width: 600px) {
+  .rdv {
+    margin-top: 70px;
+  }
+}
 .rdv_title {
   font-family: "Yeseva One", cursive;
   font-size: 1.875rem;
@@ -1007,7 +1032,7 @@ h2::after {
   background-color: #C6B3FF;
   margin-top: 3px;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 775px) {
   .rdv_title::after {
     width: 0%;
   }
@@ -1021,6 +1046,21 @@ h2::after {
   width: 0%;
   height: 1px;
   background-color: black;
+}
+@media screen and (max-width: 775px) {
+  .rdv_number {
+    font-size: 2.8125rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .rdv_number {
+    font-size: 1.875rem;
+  }
+}
+@media screen and (max-width: 375px) {
+  .rdv_number {
+    font-size: 1.25rem;
+  }
 }
 .rdv_copy {
   font-size: 1.5625rem;

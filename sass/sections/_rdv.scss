@@ -2,6 +2,10 @@
     @include flex(column, center, center);
     margin: 100px 50px 0px 50px;
 
+    @include mobile-xl {
+        margin-top: 70px;
+    }
+
     &_title {
         @include yesevaOne(calc(30rem / 16));
         @include flex(column, center, center);
@@ -12,7 +16,7 @@
             @include customUnderline(100%, 3px, $primary--bright);
             margin-top: 3px;
 
-            @include mobile-l {
+            @include tablet-s {
                 width: 0%;
             }
         }
@@ -24,6 +28,18 @@
 
         &::after {
             @include customUnderline(0%, 1px, black);
+        }
+
+        @include tablet-s {
+            font-size: calc(45rem / 16);
+        }
+
+        @include mobile-l {
+            font-size: calc(30rem / 16);
+        }
+
+        @include mobile-m {
+            font-size: calc(20rem / 16);
         }
     }
 
