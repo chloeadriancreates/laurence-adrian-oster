@@ -611,17 +611,37 @@ h2::after {
   grid-row: 1/span 1;
   grid-column: 1/span 4;
 }
+@media screen and (max-width: 600px) {
+  .cabinet_photos--1 {
+    max-height: 300px;
+  }
+}
 .cabinet_photos--2 {
   grid-row: 1/span 1;
   grid-column: 5/span 8;
+}
+@media screen and (max-width: 600px) {
+  .cabinet_photos--2 {
+    max-height: 300px;
+  }
 }
 .cabinet_photos--3 {
   grid-row: 2/span 1;
   grid-column: 1/span 8;
 }
+@media screen and (max-width: 600px) {
+  .cabinet_photos--3 {
+    max-height: 300px;
+  }
+}
 .cabinet_photos--4 {
   grid-row: 2/span 1;
   grid-column: 9/span 4;
+}
+@media screen and (max-width: 600px) {
+  .cabinet_photos--4 {
+    max-height: 300px;
+  }
 }
 @media screen and (max-width: 600px) {
   .cabinet_photos--1 {

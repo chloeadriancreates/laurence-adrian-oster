@@ -233,21 +233,33 @@ h2 {
         &--1 {
             grid-row: 1 / span 1;
             grid-column: 1 / span 4;
+            @include mobile-xl {
+                max-height: 300px;
+            }
         }
 
         &--2 {
             grid-row: 1 / span 1;
             grid-column: 5 / span 8;
+            @include mobile-xl {
+                max-height: 300px;
+            }
         }
 
         &--3 {
             grid-row: 2 / span 1;
             grid-column: 1 / span 8;
+            @include mobile-xl {
+                max-height: 300px;
+            }
         }
 
         &--4 {
             grid-row: 2 / span 1;
             grid-column: 9 / span 4;
+            @include mobile-xl {
+                max-height: 300px;
+            }
         }
 
         @include mobile-xl {
